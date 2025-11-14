@@ -1,8 +1,8 @@
 ### Touch Pad - Server App
 This is the server that sends command signals to control mouse and cursor movements.
-You MUST run this app as Admin to let it pass the firewall, and do the magic!
+You MUST run this app as Admin to let it pass the firewall, and do the magic!  <br> <br>
+Download  https://raw.github.com/CYZeusX/TouchPad_ServerApp/main/TouchPad_Server.exe
 
 <br></br>
-
 ### Touch Pad - Mobile App
 https://github.com/CYZeusX/TouchPad_MobileApp
