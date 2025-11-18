@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TouchPadServer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TouchPadServer_jar</output-path>
+    <root id="archive" name="TouchPadServer.jar">
+      <element id="module-output" name="TouchPadServer" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/jna-platform-5.18.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/jna-jpms-5.18.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

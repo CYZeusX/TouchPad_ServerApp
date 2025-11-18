@@ -1,4 +1,3 @@
-import javax.swing.*;
 import java.awt.*;
 
 /***
@@ -14,19 +13,14 @@ class TouchPadServerDriver
      */
     public static void main(String[] args) throws AWTException
     {
+        CursorAcrossBoundsFix fix = new CursorAcrossBoundsFix();
         Robot robot = new Robot();
         Server server = new Server();
-
         Server.checkAndAddFirewallRule();
-        SwingUtilities.invokeLater(() ->
-        {
-            ServerGUI serverGUI = new ServerGUI();
-            serverGUI.initialize();
-        });
 
         new Thread(() ->
         {
-            try {server.setupServer(robot);}
+            try {server.setupServer(robot, fix);}
             catch (Exception exception) {exception.printStackTrace();}
         }).start();
     }

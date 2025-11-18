@@ -15,6 +15,11 @@ public class ServerGUI
 {
     private JTextArea logTextArea;
 
+    public JTextArea getLogTextArea()
+    {
+        return logTextArea;
+    }
+
     /**
      * Creates and displays the main GUI window.
      */
@@ -38,7 +43,7 @@ public class ServerGUI
         // 3. Create the scrolling log area
         logTextArea = new JTextArea();
         logTextArea.setEditable(false);
-        logTextArea.setFont(new Font("Monospaced", Font.PLAIN, 12));
+        logTextArea.setFont(new Font("Monospaced", Font.PLAIN, 24));
         logTextArea.setBackground(Color.BLACK);
         logTextArea.setForeground(Color.GREEN);
         logTextArea.setMargin(new Insets(5, 5, 5, 5));
@@ -94,7 +99,7 @@ public class ServerGUI
             @Override
             public void write(int b) throws IOException
             {
-                // This is how you safely update a Swing component from any thread
+                // safely update a Swing component from any thread
                 SwingUtilities.invokeLater(() ->
                 {
                     logTextArea.append(String.valueOf((char) b));
